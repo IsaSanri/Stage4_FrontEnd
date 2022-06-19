@@ -17,10 +17,10 @@ export class PersonalComponent {
 
     this.personalForm=this.fb.group({
       name:["",Validators.required],
-      lastname:["",Validators.required],
+      lastName:["",Validators.required],
       age:["",[Validators.required,Validators.maxLength(2)]],
       email:["",[Validators.required,Validators.email]],
-      phonenumber:["",[Validators.required,Validators.maxLength(10)]],
+      phoneNumber:["",[Validators.required,Validators.maxLength(10)]],
     });
 
   }
