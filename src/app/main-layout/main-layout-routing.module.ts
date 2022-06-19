@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { VigilanteGuard } from '../vigilante.guard';
+import { VigilanteGuard } from '../personal.guard';
 import { MainLayoutComponent } from './main-layout.component';
 
 const routes: Routes = [
