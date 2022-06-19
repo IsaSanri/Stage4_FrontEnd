@@ -4,6 +4,7 @@ import { AppState } from 'src/app/core/store/models/app.model';
 import { Store } from '@ngrx/store';
 import { storePersonalData } from 'src/app/core/store/actions/personal-data.action';
 import { PersonalInformationInterface } from 'src/app/models/information.model';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class PersonalComponent {
   personalForm:FormGroup;
   personalDataSource: PersonalInformationInterface;
 
-  constructor(private fb:FormBuilder,private store: Store<AppState>)
+  constructor(private fb:FormBuilder,private store: Store<AppState>, private router:Router)
   {
     this.personalDataSource = {
       name: '',
@@ -66,10 +67,13 @@ export class PersonalComponent {
   // }
 
 
-  savePersonalInformation(personalDatavalue: FormGroup){
-    this.store.dispatch(
-      storePersonalData({ personalInformation: personalDatavalue.value}
-    ))
+  // savePersonalInformation(personalDatavalue: FormGroup){
+  //   this.store.dispatch(
+  //     storePersonalData({ personalInformation: personalDatavalue.value}
+  //   ))
+  // }
+  nextForm(){
+    this.router.navigate(['/adress'])
   }
 
 }
