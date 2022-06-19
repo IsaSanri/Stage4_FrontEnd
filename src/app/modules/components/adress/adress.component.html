@@ -1,0 +1,51 @@
+<div class="w3-sand w3-grayscale w3-large">
+  <div class="container">
+    <form id="contact" action="" method="post">
+      <h3>ADRESS INFORMATION</h3>
+      <fieldset>
+        <input
+          placeholder="Adress"
+          type="text"
+          tabindex="1"
+          required
+          autofocus
+        />
+      </fieldset>
+      <fieldset>
+        <input
+          placeholder="Neighbordhood"
+          type="text"
+          tabindex="2"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <input
+          placeholder="State"
+          type="text"
+          tabindex="3"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <input
+          placeholder="City"
+          type="email"
+          tabindex="4"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <button
+          name="submit"
+          type="submit"
+          id="contact-submit"
+          data-submit="...Sending"
+          (click)="submit()"
+        >
+          Submit
+        </button>
+      </fieldset>
+    </form>
+  </div>
+</div>

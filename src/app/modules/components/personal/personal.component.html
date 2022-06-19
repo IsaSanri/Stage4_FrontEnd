@@ -1,0 +1,59 @@
+<!-- <div class="form" [formGroup]="personalForm"> -->
+<!-- <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" appDateFormat />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastname" appDateFormat />
+      </mat-form-field> -->
+<!-- </div> -->
+<div class="w3-sand w3-grayscale w3-large">
+  <div class="container">
+    <div id="contact" action="" method="post" class="form" [formGroup]="personalForm">
+      <h3>PERSONAL INFORMATION</h3>
+      <fieldset>
+        <input
+          placeholder="Name"
+          type="text"
+          formControlName="name"/>
+
+      </fieldset>
+      <fieldset>
+        <input
+          placeholder="Last Name"
+          type="text"
+          formControlName="lastname"/>
+      </fieldset>
+      <fieldset>
+        <input
+          placeholder="Age"
+          type="text"
+          formControlName="age"/>
+      </fieldset>
+      <fieldset>
+        <input
+          placeholder="Email"
+          type="email"
+          formControlName="email"/>
+      </fieldset>
+      <fieldset>
+        <input
+          placeholder="Phone Number"
+          type="tel"
+          formControlName="phonenumber"/>
+      </fieldset>
+      <fieldset>
+        <button
+          name="next"
+          type="submit"
+          id="contact-submit"
+          data-submit="...Sending"
+          (click)="nextInfo()"
+          [disabled]="!personalForm.valid"
+          >
+          Next
+        </button>
+      </fieldset>
+  </div>
+</div>
